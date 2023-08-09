@@ -1,20 +1,13 @@
 :root {
   --white-color: #fff;
   --black-color: #000;
-  --text-color: #333;
-  --primary-color: #ee4d2d;
-  --border-color: #dbdbdb;
+  --text-color: rgb(77, 89, 105);
+  --primary-color: #c01111;
 
-  --navbar-height: 34px;
-  --header-height: 120px;
-  --header-sort-bar-height: 46px;
-  --header-with-search-height: calc(
-    var(--header-height) - var(--navbar-height)
-  );
+  --header-height: 99.2px;
 }
-
 * {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
@@ -22,4 +15,13 @@ html {
   line-height: 1.6rem;
   font-family: "Open Sans";
   box-sizing: border-box;
+  font-style: 1.6rem;
+}
+body{
+  height: 1000px;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
 }
