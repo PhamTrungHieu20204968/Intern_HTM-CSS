@@ -301,7 +301,7 @@
   line-height: 28.8px;
 }
 
-.business-card .business-card__content .business-card__button {
+.business-card__button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -317,20 +317,19 @@
   transition: all 0.3s;
   position: relative;
   z-index: 1;
-
-  .business-card__button-icon {
-    width: 24px;
-    height: 24px;
-    margin-left: 12px;
-    border-radius: 50%;
-    display: inline-block;
-    background-color: rgb(65 72 84);
-    line-height: 25px;
-    text-align: center;
-  }
+}
+.business-card__button-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: rgb(65 72 84);
+  line-height: 25px;
+  text-align: center;
 }
 
-.business-card--primary .business-card__content .business-card__button {
+.btn--primary.business-card__button {
   background-color: #fff;
   color: var(--primary-color);
 
@@ -339,7 +338,7 @@
   }
 }
 
-.business-card .business-card__content .business-card__button::before {
+.business-card__button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -357,35 +356,278 @@
   background: var(--primary-color);
 }
 
-.business-card--primary .business-card__content .business-card__button::before {
+.btn--primary.business-card__button::before {
   background: #2b3441;
 }
 
-.business-card .business-card__content .business-card__button:hover {
+.business-card__button:hover {
   .business-card__button-icon {
     background-color: var(--primary-color);
   }
 }
 
-.business-card--primary .business-card__content .business-card__button:hover {
+.btn--primary.business-card__button:hover {
   color: #fff;
   .business-card__button-icon {
     background-color: rgb(65 72 84);
   }
 }
 
-.business-card
-  .business-card__content
-  .business-card__button:hover.business-card__button::before {
+.business-card__button:hover.business-card__button::before {
   transform: scale3d(1, 1, 1);
   opacity: 1;
   background: var(--primary-color);
 }
 
-.business-card--primary
-  .business-card__content
-  .business-card__button:hover.business-card__button::before {
+.btn--primary.business-card__button:hover.business-card__button::before {
   transform: scale3d(1, 1, 1);
   opacity: 1;
   background: #2b3441;
+}
+
+/* project */
+
+.project {
+  margin-top: 140px;
+  margin-bottom: 120px;
+  position: relative;
+}
+
+.project::before {
+  content: "";
+  width: 71px;
+  height: 71px;
+  border-radius: 50%;
+  background-color: #ffeff0;
+  position: absolute;
+  right: -90px;
+  bottom: -40px;
+}
+
+.project__title {
+  position: relative;
+  line-height: 60px;
+}
+
+.project__title::before {
+  content: "";
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #c01111;
+  position: absolute;
+  right: 25%;
+  top: -30px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.project__title::after {
+  content: "";
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: rgba(192, 17, 17, 0.1);
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+}
+
+.project-counter__wrapper {
+  margin-top: 40px;
+  padding-bottom: 30px;
+}
+
+.project-counter {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+
+.project-counter:last-child {
+  margin-bottom: 0;
+}
+
+.project-counter__number-wrap {
+  display: flex;
+  align-items: flex-start;
+}
+
+.project-counter__number {
+  color: #c01111;
+  font-size: 11.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.project-counter__label {
+  color: #c01111;
+  font-size: 48px;
+  font-weight: 700;
+  padding-left: 30px;
+  position: relative;
+  top: 34px;
+}
+
+.project-counter__title {
+  font-size: 24px;
+  position: relative;
+  top: -25px;
+  left: -50px;
+  color: rgb(77, 89, 105);
+}
+
+.btn-wrapper {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.btn--small .business-card__button {
+  width: 80%;
+}
+
+/* project Counter */
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.project-counter__number {
+  transition: --num 1s;
+  counter-reset: num var(--num);
+}
+
+.count-to-200 {
+  --num: 200;
+}
+
+.count-to-300 {
+  --num: 300;
+}
+
+.project-counter__number::after {
+  content: counter(num);
+}
+
+/* Project slider */
+
+.project-slider {
+  padding: 10px;
+  position: relative;
+}
+
+.project-slider__frame {
+  width: 332px;
+  max-height: 470px;
+  position: relative;
+  margin-top: 90px;
+  margin-bottom: 70px;
+  border-radius: 8px;
+  display: flex;
+  overflow: hidden;
+  transition: all 0.5s;
+  scroll-behavior: smooth;
+}
+
+.frame__slide {
+  width: 100%;
+  position: relative;
+}
+
+.frame__slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(249, 249, 249, 0.9);
+}
+
+.slide__img {
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 24px;
+  width: 100%;
+  color: rgb(43, 52, 65);
+}
+
+.slide-content__sub-title {
+  font-size: 1.3rem;
+}
+
+.slide-content__title {
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.slide-content__title:hover {
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.slide-content__description {
+  margin-bottom: 20px;
+  line-height: 25.2px;
+}
+
+.slide-content__button {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--primary-color);
+
+  .business-card__button-icon {
+    background-color: rgba(192, 17, 17, 0.1);
+  }
+}
+
+.project-slider__controls {
+  width: 332px;
+  position: absolute;
+  bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.controls-btn {
+  padding: 0;
+  border: none;
+  background-color: rgba(148, 155, 164, 0.1);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 40px;
+
+  .controls-icon {
+    color: #949ba4;
+  }
+}
+
+.controls-btn:last-child {
+  margin: 0;
+}
+
+.controls-btn:hover {
+  cursor: pointer;
+  background-color: var(--primary-color);
+  .controls-icon {
+    color: #fff;
+  }
 }

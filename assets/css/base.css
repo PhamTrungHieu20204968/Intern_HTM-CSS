@@ -17,8 +17,9 @@ html {
   box-sizing: border-box;
   font-style: 1.6rem;
 }
-body{
-  height: 1000px;
+body {
+  height: 10000px;
+  font-size: 1.4rem;
 }
 
 a {
