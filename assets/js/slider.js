@@ -22,7 +22,6 @@ function controlChangeSlide() {
     if (slide < 0) {
       slide = 2;
       clearInterval(changeSlide);
-      setInterval(changeSlide, 4000);
     }
     frameElement.scrollLeft = 332 * slide;
   });
@@ -31,7 +30,6 @@ function controlChangeSlide() {
     if (slide > 2) {
       slide = 0;
       clearInterval(changeSlide);
-      setInterval(changeSlide, 4000);
     }
     frameElement.scrollLeft = 332 * slide;
   });
