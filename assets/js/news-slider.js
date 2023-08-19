@@ -1,6 +1,5 @@
 let newsSlide = 0;
 const newFrameElement = document.querySelector(".news-body__list");
-console.log(newFrameElement);
 
 function changeSlide() {
   newsSlide++;

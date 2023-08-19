@@ -14,7 +14,14 @@
   transition: all 0.3s ease-in-out;
 }
 
-.header__logo {
+.header__logo,
+.header__menu-container,
+.header__toogle-menu-container,
+.header__language {
+  z-index: 100;
+}
+
+.header__logo a {
   height: var(--header-height);
   width: 100%;
   padding: 10px;
@@ -44,6 +51,7 @@
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -89,6 +97,59 @@
   .header-menu > li:not(:last-child) {
     margin-right: 35px;
   }
+}
+
+.header__toogle-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: var(--header-height);
+}
+
+.toogle-menu-icon {
+  font-size: 22px;
+  padding: 0.25em;
+  cursor: pointer;
+  border: 0 solid;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #494c4f;
+}
+
+.toogle-menu-icon.hidden {
+  display: none;
+}
+
+.header__dropdown-menu {
+  position: relative;
+  background-color: #fff;
+  font-size: 1.3rem;
+  display: none;
+  flex-direction: column;
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.08);
+  z-index: 1;
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.header__dropdown-menu.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-menu__item {
+  padding: 10px 13px;
+  line-height: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.dropdown-menu__item--active,
+.dropdown-menu__item:hover {
+  background-color: var(--primary-color);
+  color: #fff;
 }
 
 .language-container {
@@ -153,9 +214,10 @@
 
 .business {
   padding-top: 32px;
+  margin-bottom: 32px;
 }
 
-.business .business-content {
+.business-content {
   border: 6px solid #f9f9f9;
   border-radius: 16px;
   background-color: #fff;
@@ -163,7 +225,7 @@
   display: flex;
 }
 
-.business .business-content::before {
+.business-content::before {
   content: "";
   border: 6px solid #f9f9f9;
   border-radius: 16px;
@@ -177,25 +239,48 @@
   z-index: -1;
 }
 
-.business .business-content .left-content .left-content__des {
+.left-content__des {
   line-height: 2.8rem;
   font-size: 1.6rem;
   color: #2b3441;
   padding: 40px 0 40px 70px;
 }
 
-.business .business-content .right-content {
+@media screen and (max-width: 991px) {
+  .left-content__des {
+    padding-left: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    flex: 0 0 48%;
+  }
+}
+
+.right-content {
   margin: -70px -35px -115px 40px;
   max-height: 320px;
-  .business_intro-img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    border: none;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .right-content {
+    margin: 80px 0 -120px 30px;
   }
+}
+
+@media screen and (max-width: 740px) {
+  .right-content {
+    margin: 0;
+    max-height: unset;
+  }
+}
+
+.business_intro-img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 /* business Card */
@@ -241,6 +326,7 @@
   border-radius: 16px;
   background-color: var(--primary-color);
   position: relative;
+  margin-bottom: 25px;
 }
 
 .business-card--primary::before {
@@ -687,6 +773,13 @@
   padding-top: 100px;
   position: relative;
 }
+
+@media screen and (max-width: 1024px) {
+  .career-content__sub-title {
+    font-size: 1.6rem;
+  }
+}
+
 .career-content__sub-title::before {
   content: "";
   position: absolute;
@@ -708,6 +801,18 @@
   margin-bottom: 80px;
 }
 
+@media screen and (max-width: 1024px) {
+  .career-content__title {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .career-content__title {
+    font-size: 3.2rem;
+  }
+}
+
 .career-content__description {
   font-size: 3.2rem;
   font-weight: 700;
@@ -715,9 +820,35 @@
   line-height: 57.6px;
 }
 
+@media screen and (max-width: 1024px) {
+  .career-content__description {
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .career-content__description {
+    font-size: 1.8rem;
+  }
+}
+
 .career-content__sub-description {
   font-size: 2.4rem;
   line-height: 57.6px;
+}
+
+@media screen and (max-width: 1024px) {
+  .career-content__sub-description {
+    font-size: 1.8rem;
+    line-height: 25.2px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .career-content__sub-description {
+    font-size: 1.4rem;
+    line-height: 25.2px;
+  }
 }
 
 .career-content__btn-wrap {

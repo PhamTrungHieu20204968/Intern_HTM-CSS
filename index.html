@@ -20,14 +20,14 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./assets/css/base.css" />
-    <link rel="stylesheet" href="./assets/css/grid.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/grid.css" />
   </head>
   <body>
     <div class="header">
       <div class="grid wide">
         <div class="row no-gutters">
-          <div class="col l-2 header__logo">
+          <div class="col l-2 m-2 c-2 header__logo">
             <a href="#">
               <img
                 class="header__logo-img"
@@ -36,7 +36,7 @@
               />
             </a>
           </div>
-          <div class="col l-8 header__menu-container">
+          <div class="col l-8 m-0 c-0 header__menu-container">
             <ul class="header-menu">
               <li class="header-menu-item menu-item--active">
                 <a href="#" tabindex="-1"> Trang chủ </a>
@@ -58,7 +58,15 @@
               </li>
             </ul>
           </div>
-          <div class="col l-2 header__language">
+
+          <div class="col l-0 m-8 c-8 header__toogle-menu-container">
+            <div class="header__toogle-menu">
+              <i class="fa-solid fa-bars toogle-menu-icon"></i>
+              <i class="fa-solid fa-xmark toogle-menu-icon hidden"></i>
+            </div>
+          </div>
+
+          <div class="col l-2 m-2 c-2 header__language">
             <ul class="language-container">
               <li class="language-item language-item--active">
                 <a href="#" tabindex="-1">VI</a>
@@ -66,6 +74,16 @@
               <li class="language-item"><a href="#" tabindex="-1">EN</a></li>
             </ul>
           </div>
+        </div>
+        <div class="header__dropdown-menu">
+          <a href="#" class="dropdown-menu__item dropdown-menu__item--active"
+            >Trang chủ</a
+          >
+          <a href="#" class="dropdown-menu__item">Về chúng tôi</a>
+          <a href="#" class="dropdown-menu__item">Dự án</a>
+          <a href="#" class="dropdown-menu__item">Cơ hội nghề nghiệp</a>
+          <a href="#" class="dropdown-menu__item">Môi trường làm việc</a>
+          <a href="#" class="dropdown-menu__item">Tin tức</a>
         </div>
       </div>
     </div>
@@ -84,36 +102,40 @@
 
       <div class="business">
         <div class="grid wide">
-          <div class="row no-gutters">
-            <h2 class="business__title body-title">Lĩnh vực kinh doanh</h2>
-            <div class="business-content">
-              <div class="col l-6 left-content">
-                <div class="left-content__des">
-                  <p>
-                    Là một Digital Creative Studio, Sun* luôn đề cao tinh thần
-                    làm chủ sản phẩm, tư duy sáng tạo trong mỗi dự án để mang
-                    đến những trải nghiệm "<strong>Awesome</strong>" nhất cho
-                    end-user. <br />
-                    <br />
-                    Với hai dòng dịch vụ là "<strong
-                      >Creative & Engineering</strong
-                    >" và "<strong>Talent Platform</strong>", Sun* đã và đang
-                    từng bước cùng công nghệ tạo ra những giá trị tốt đẹp cho xã
-                    hội.
-                  </p>
+          <h2 class="business__title body-title">Lĩnh vực kinh doanh</h2>
+          <div class="business-content">
+            <div class="row no-gutters business-content-wrap">
+              <div class="col l-6 m-6 c-12">
+                <div class="left-content">
+                  <div class="left-content__des">
+                    <p>
+                      Là một Digital Creative Studio, Sun* luôn đề cao tinh thần
+                      làm chủ sản phẩm, tư duy sáng tạo trong mỗi dự án để mang
+                      đến những trải nghiệm "<strong>Awesome</strong>" nhất cho
+                      end-user. <br />
+                      <br />
+                      Với hai dòng dịch vụ là "<strong
+                        >Creative & Engineering</strong
+                      >" và "<strong>Talent Platform</strong>", Sun* đã và đang
+                      từng bước cùng công nghệ tạo ra những giá trị tốt đẹp cho
+                      xã hội.
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div class="col l-6 right-content">
-                <img
-                  class="business_intro-img"
-                  src="./assets/img/intro-business.png"
-                  alt="business_intro-img"
-                />
+              <div class="col l-6 m-6 c-12">
+                <div class="right-content">
+                  <img
+                    class="business_intro-img"
+                    src="./assets/img/intro-business.png"
+                    alt="business_intro-img"
+                  />
+                </div>
               </div>
             </div>
           </div>
           <div class="row business-card-wrapper">
-            <div class="col big-gap l-6">
+            <div class="col big-gap l-6 m-12 c-12">
               <div class="business-card business-card--primary">
                 <div class="business-card__content">
                   <div class="business-card__sub-title">
@@ -135,7 +157,7 @@
                 </div>
               </div>
             </div>
-            <div class="col big-gap l-6">
+            <div class="col big-gap l-6 m-12 c-12">
               <div class="business-card business-card--2circle">
                 <div class="business-card__content">
                   <div class="business-card__sub-title">
@@ -159,10 +181,10 @@
         </div>
       </div>
 
-      <div class="grid wide">
-        <div class="project">
+      <div class="project">
+        <div class="grid wide">
           <div class="row no-gutters">
-            <div class="col l-6">
+            <div class="col l-6 m-12 c-12">
               <h2 class="project__title body-title">Dự án của chúng tôi</h2>
               <div class="project-counter__wrapper">
                 <div class="project-counter">
@@ -191,8 +213,8 @@
                 </a>
               </div>
             </div>
-            <div class="col l-1"></div>
-            <div class="col l-4">
+            <div class="col l-1 m-0 c-0"></div>
+            <div class="col l-4 m-12 c-12">
               <div class="project-slider">
                 <div class="project-slider__frame">
                   <div class="frame__slide">
@@ -279,342 +301,348 @@
                 </div>
               </div>
             </div>
-            <div class="col l-2"></div>
+            <div class="col l-2 m-0 c-0"></div>
           </div>
-        </div>
-
-        <div class="career">
-          <div class="row">
-            <div class="col l-12">
-              <div class="career-container">
-                <div class="career-content">
-                  <div class="career-content__sub-title">Sun Asterisk</div>
-                  <div class="career-content__title">Cơ hội nghề nghiệp</div>
-                  <div class="career-content__description">
-                    Join us & MAKE AWESOME THINGS THAT MATTER.
-                  </div>
-                  <div class="career-content__sub-description">
-                    Sun* luôn tìm kiếm những con người đam mê thử thách để tạo
-                    nên những giá trị "Awesome".
-                    <br />
-                    <p></p>
-                    Cùng trở thành một phần của Sun* ngay hôm nay.
-                  </div>
-                  <div class="career-content__btn-wrap">
-                    <a class="business-card__button btn--primary" href="#"
-                      >Gia nhập đội ngũ Sun*
-                      <span class="business-card__button-icon">
-                        <i class="fa-solid fa-arrow-right-long fa-xs"></i>
-                      </span>
-                    </a>
+          <div class="career">
+            <div class="row">
+              <div class="col l-12">
+                <div class="career-container">
+                  <div class="career-content">
+                    <div class="career-content__sub-title">Sun Asterisk</div>
+                    <div class="career-content__title">Cơ hội nghề nghiệp</div>
+                    <div class="career-content__description">
+                      Join us & MAKE AWESOME THINGS THAT MATTER.
+                    </div>
+                    <div class="career-content__sub-description">
+                      Sun* luôn tìm kiếm những con người đam mê thử thách để tạo
+                      nên những giá trị "Awesome".
+                      <br />
+                      <p></p>
+                      Cùng trở thành một phần của Sun* ngay hôm nay.
+                    </div>
+                    <div class="career-content__btn-wrap">
+                      <a class="business-card__button btn--primary" href="#"
+                        >Gia nhập đội ngũ Sun*
+                        <span class="business-card__button-icon">
+                          <i class="fa-solid fa-arrow-right-long fa-xs"></i>
+                        </span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="populated">
-          <div class="row no-gutters">
-            <div class="col l-6">
-              <div class="populated-body">
-                <h2 class="populated__title body-title">Môi trường làm việc</h2>
-                <div class="populated-body__list">
-                  <div class="populated-list__item">
-                    <div class="populated-list__icon-wrap">
-                      <i class="fa-solid fa-check fa-2xl"></i>
-                    </div>
-                    <div class="populated__item-title">
-                      Môi trường sáng tạo - Tôn trọng sự khác biệt
-                    </div>
-                  </div>
-                  <div class="populated-list__item">
-                    <div class="populated-list__icon-wrap">
-                      <i class="fa-solid fa-check fa-2xl"></i>
-                    </div>
-                    <div class="populated__item-title">Trao quyền làm chủ</div>
-                  </div>
-                  <div class="populated-list__item">
-                    <div class="populated-list__icon-wrap">
-                      <i class="fa-solid fa-check fa-2xl"></i>
-                    </div>
-                    <div class="populated__item-title">
-                      Tập trung hỗ trợ sự phát triển cá nhân
-                    </div>
-                  </div>
-                  <div class="populated-list__item">
-                    <div class="populated-list__icon-wrap">
-                      <i class="fa-solid fa-check fa-2xl"></i>
-                    </div>
-                    <div class="populated__item-title">
-                      Sôi nổi các hoạt động phong trào học tập, giao lưu văn hóa
-                    </div>
-                  </div>
-                  <div class="populated-list__item">
-                    <div class="populated-list__icon-wrap">
-                      <i class="fa-solid fa-check fa-2xl"></i>
-                    </div>
-                    <div class="populated__item-title">
-                      Chế độ chăm sóc đặc biệt cho phụ nữ
-                    </div>
-                  </div>
-                  <div class="populated-list__item">
-                    <div class="populated-list__icon-wrap">
-                      <i class="fa-solid fa-check fa-2xl"></i>
-                    </div>
-                    <div class="populated__item-title">
-                      Chế độ đãi ngộ chung đầy đủ, hấp dẫn
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col l-6">
-              <div class="populated__banner">
-                <img
-                  class="populated__banner-img"
-                  src="./assets/img/populated-banner.jpg"
-                  alt=""
-                />
-                <div class="populated-btn btn-wrapper">
-                  <a class="business-card__button" href="#"
-                    >Xem chi tiết
-                    <span class="business-card__button-icon">
-                      <i class="fa-solid fa-arrow-right-long fa-xs"></i>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="news">
-          <div class="row no-gutters">
-            <div class="col l-12">
-              <div class="news__container">
-                <div class="news-header">
-                  <h2 class="news-header__title body-title">
-                    Văn hóa - Sự kiện
+          <div class="populated">
+            <div class="row no-gutters">
+              <div class="col l-6">
+                <div class="populated-body">
+                  <h2 class="populated__title body-title">
+                    Môi trường làm việc
                   </h2>
-                  <div class="news-slider__controls">
-                    <button class="news-controls__prev-btn controls-btn">
-                      <i
-                        class="fa-solid fa-chevron-left fa-lg controls-icon"
-                      ></i>
-                    </button>
-                    <button class="news-controls__next-btn controls-btn">
-                      <i
-                        class="fa-solid fa-chevron-right fa-lg controls-icon"
-                      ></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="news-body">
-                  <div class="news-body__list">
-                    <div class="news-item">
-                      <div class="news-item__img-wrapper">
-                        <img
-                          class="news-item__img"
-                          src="./assets/img/news/1.webp"
-                          alt=""
-                        />
+                  <div class="populated-body__list">
+                    <div class="populated-list__item">
+                      <div class="populated-list__icon-wrap">
+                        <i class="fa-solid fa-check fa-2xl"></i>
                       </div>
-                      <div class="news-item__content">
-                        <div class="news-item__title">
-                          <a href="#">
-                            Những khoảnh khắc ấn tượng của sự kiện công nghệ hấp
-                            dẫn nhất Sun* Đà Nẵng 2022 - The Trinity Crown
-                          </a>
-                        </div>
-                        <div class="news-item__preview">
-                          Như đã hẹn, 02/07 vừa qua đối với các Sun* Đà Nẵng là
-                          một ngày thật đáng nhớ, bởi sự kiện công nghệ đặc biệt
-                          - The Trinity Crown đã diễn ra thành công tốt đẹp, để
-                          lại rất nhiều ấn tượng không thể quên trong lòng các
-                          Sunner Đà Thành.
-                        </div>
-                        <a
-                          class="slide-content__button btn--primary button--text-primary"
-                          >Xem chi tiết
-                          <span class="business-card__button-icon">
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                          </span>
-                        </a>
+                      <div class="populated__item-title">
+                        Môi trường sáng tạo - Tôn trọng sự khác biệt
                       </div>
                     </div>
-                    <div class="news-item">
-                      <div class="news-item__img-wrapper">
-                        <img
-                          class="news-item__img"
-                          src="./assets/img/news/2.webp"
-                          alt=""
-                        />
+                    <div class="populated-list__item">
+                      <div class="populated-list__icon-wrap">
+                        <i class="fa-solid fa-check fa-2xl"></i>
                       </div>
-                      <div class="news-item__content">
-                        <div class="news-item__title">
-                          <a href="#">
-                            Evering - Dự án nổi bật với chiếc nhẫn thông minh có
-                            khả năng thay thế ví tiền
-                          </a>
-                        </div>
-                        <div class="news-item__preview">
-                          Dự án Evering (hay còn được gọi là Ring) do đội ngũ
-                          trực thuộc CEV11 nhà Sun* thực hiện, đã hoàn thành sứ
-                          mệnh của mình khi chính thức cho ra mắt sản phẩm, nhận
-                          được sự hưởng ứng tích cực của đông đảo người dùng,
-                          thu hút tới hơn 10 Công ty đổ tiền đầu tư. Sức hút của
-                          dự án này đến từ đâu, khiến cho mức giá bán ra một sản
-                          phẩm không hề rẻ? Hãy cùng Sun* News giải mã ngay nhé!
-                        </div>
-                        <a
-                          class="slide-content__button btn--primary button--text-primary"
-                          >Xem chi tiết
-                          <span class="business-card__button-icon">
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                          </span>
-                        </a>
+                      <div class="populated__item-title">
+                        Trao quyền làm chủ
                       </div>
                     </div>
-                    <div class="news-item">
-                      <div class="news-item__img-wrapper">
-                        <img
-                          class="news-item__img"
-                          src="./assets/img/news/3.webp"
-                          alt=""
-                        />
+                    <div class="populated-list__item">
+                      <div class="populated-list__icon-wrap">
+                        <i class="fa-solid fa-check fa-2xl"></i>
                       </div>
-                      <div class="news-item__content">
-                        <div class="news-item__title">
-                          <a href="#">
-                            Ứng dụng của người Sun* - vỏn vẹn 2 ngày phát triển
-                            giúp tiết kiệm 1500 giờ làm việc mỗi tháng
-                          </a>
-                        </div>
-                        <div class="news-item__preview">
-                          Chẳng cần dùng file theo dõi cồng kềnh như những đợt
-                          'work from home' trước, giờ đây, công việc
-                          checkin/checkout của Sunners làm việc tại nhà hàng
-                          ngày chỉ còn là chuyện nhỏ khi đã có cô nàng "Thư Ký
-                          Kim" - công cụ chấm công tự động do chính người Sun*
-                          phát triển.
-                        </div>
-                        <a
-                          class="slide-content__button btn--primary button--text-primary"
-                          >Xem chi tiết
-                          <span class="business-card__button-icon">
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                          </span>
-                        </a>
+                      <div class="populated__item-title">
+                        Tập trung hỗ trợ sự phát triển cá nhân
                       </div>
                     </div>
-                    <div class="news-item">
-                      <div class="news-item__img-wrapper">
-                        <img
-                          class="news-item__img"
-                          src="./assets/img/news/4.webp"
-                          alt=""
-                        />
+                    <div class="populated-list__item">
+                      <div class="populated-list__icon-wrap">
+                        <i class="fa-solid fa-check fa-2xl"></i>
                       </div>
-                      <div class="news-item__content">
-                        <div class="news-item__title">
-                          <a href="#">
-                            Sun* Hồ Chí Minh: 1001 khoảnh khắc không thể nào
-                            quên tại chuyến du lịch Nha Trang
-                          </a>
-                        </div>
-                        <div class="news-item__preview">
-                          Vượt qua gần 500 cây số, các Sunners chi nhánh Hồ Chí
-                          Minh đã có mặt tại bờ biển Nha Trang, Khánh Hòa để
-                          cùng nhau bước vào chuyến du lịch 3N2Đ đáng nhớ của
-                          mình. Bên cạnh những trải nghiệm ấn tượng cùng với
-                          việc thưởng thức nhiều danh lam thắng cảnh tại Nha
-                          Trang, gần 100 anh em Sun* Hồ Chí Minh đã cùng nhau
-                          cháy hết mình với hoạt động team-building bãi biển
-                          cũng như chương trình Gala Night đặc sắc mang tên "On
-                          The Mic" tại khách sạn Nha Trang Horizon.
-                        </div>
-                        <a
-                          class="slide-content__button btn--primary button--text-primary"
-                          >Xem chi tiết
-                          <span class="business-card__button-icon">
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                          </span>
-                        </a>
+                      <div class="populated__item-title">
+                        Sôi nổi các hoạt động phong trào học tập, giao lưu văn
+                        hóa
                       </div>
                     </div>
-                    <div class="news-item">
-                      <div class="news-item__img-wrapper">
-                        <img
-                          class="news-item__img"
-                          src="./assets/img/news/5.webp"
-                          alt=""
-                        />
+                    <div class="populated-list__item">
+                      <div class="populated-list__icon-wrap">
+                        <i class="fa-solid fa-check fa-2xl"></i>
                       </div>
-                      <div class="news-item__content">
-                        <div class="news-item__title">
-                          <a href="#"> Sun* Duo 2022: Rực rỡ và mãn nhãn! </a>
-                        </div>
-                        <div class="news-item__preview">
-                          Sau chuyến Company Trip với rất nhiều kỷ niệm đẹp,
-                          chắc hẳn đêm Gala Night cùng sự kiện đặc biệt Sun* Duo
-                          2022 là một điểm nhấn khó quên trong lòng tất cả
-                          Sunner Hà Nội có mặt trong chương trình.
-                        </div>
-                        <a
-                          class="slide-content__button btn--primary button--text-primary"
-                          >Xem chi tiết
-                          <span class="business-card__button-icon">
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                          </span>
-                        </a>
+                      <div class="populated__item-title">
+                        Chế độ chăm sóc đặc biệt cho phụ nữ
                       </div>
                     </div>
-                    <div class="news-item">
-                      <div class="news-item__img-wrapper">
-                        <img
-                          class="news-item__img"
-                          src="./assets/img/news/6.webp"
-                          alt=""
-                        />
+                    <div class="populated-list__item">
+                      <div class="populated-list__icon-wrap">
+                        <i class="fa-solid fa-check fa-2xl"></i>
                       </div>
-                      <div class="news-item__content">
-                        <div class="news-item__title">
-                          <a href="#">
-                            Sun* Đà Nẵng: Thanh xuân của chúng ta và kỷ niệm
-                            đáng nhớ về chuyến Company Trip của những "lần đầu
-                            tiên"
-                          </a>
-                        </div>
-                        <div class="news-item__preview">
-                          Lần đầu tiên trải nghiệm cảm giác quẩy xuyên đêm trên
-                          tàu; lần đầu tiên cùng nhau đặt chân đến vùng đất Nha
-                          Trang đầy nắng và gió; lần đầu tiên được hết mình cùng
-                          nhau trong Teambuilding sau hơn 2 năm tạm dừng do dịch
-                          bệnh; lần đầu tiên một sân khấu âm nhạc rực rỡ sắc màu
-                          và tràn đầy cảm xúc diễn ra...Tất cả những "lần đầu
-                          tiên" ấy đều đã lần lượt xuất hiện trong chuyến Sun*
-                          Company trip có 1-0-2 này của Sun* Đà Nẵng.
-                        </div>
-                        <a
-                          class="slide-content__button btn--primary button--text-primary"
-                          >Xem chi tiết
-                          <span class="business-card__button-icon">
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                          </span>
-                        </a>
+                      <div class="populated__item-title">
+                        Chế độ đãi ngộ chung đầy đủ, hấp dẫn
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="news-footer">
-                  <div class="news-btn btn-wrapper">
+              </div>
+              <div class="col l-6">
+                <div class="populated__banner">
+                  <img
+                    class="populated__banner-img"
+                    src="./assets/img/populated-banner.jpg"
+                    alt=""
+                  />
+                  <div class="populated-btn btn-wrapper">
                     <a class="business-card__button" href="#"
                       >Xem chi tiết
                       <span class="business-card__button-icon">
                         <i class="fa-solid fa-arrow-right-long fa-xs"></i>
                       </span>
                     </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="news">
+            <div class="row no-gutters">
+              <div class="col l-12">
+                <div class="news__container">
+                  <div class="news-header">
+                    <h2 class="news-header__title body-title">
+                      Văn hóa - Sự kiện
+                    </h2>
+                    <div class="news-slider__controls">
+                      <button class="news-controls__prev-btn controls-btn">
+                        <i
+                          class="fa-solid fa-chevron-left fa-lg controls-icon"
+                        ></i>
+                      </button>
+                      <button class="news-controls__next-btn controls-btn">
+                        <i
+                          class="fa-solid fa-chevron-right fa-lg controls-icon"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="news-body">
+                    <div class="news-body__list">
+                      <div class="news-item">
+                        <div class="news-item__img-wrapper">
+                          <img
+                            class="news-item__img"
+                            src="./assets/img/news/1.webp"
+                            alt=""
+                          />
+                        </div>
+                        <div class="news-item__content">
+                          <div class="news-item__title">
+                            <a href="#">
+                              Những khoảnh khắc ấn tượng của sự kiện công nghệ
+                              hấp dẫn nhất Sun* Đà Nẵng 2022 - The Trinity Crown
+                            </a>
+                          </div>
+                          <div class="news-item__preview">
+                            Như đã hẹn, 02/07 vừa qua đối với các Sun* Đà Nẵng
+                            là một ngày thật đáng nhớ, bởi sự kiện công nghệ đặc
+                            biệt - The Trinity Crown đã diễn ra thành công tốt
+                            đẹp, để lại rất nhiều ấn tượng không thể quên trong
+                            lòng các Sunner Đà Thành.
+                          </div>
+                          <a
+                            class="slide-content__button btn--primary button--text-primary"
+                            >Xem chi tiết
+                            <span class="business-card__button-icon">
+                              <i class="fa-solid fa-arrow-right-long"></i>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="news-item">
+                        <div class="news-item__img-wrapper">
+                          <img
+                            class="news-item__img"
+                            src="./assets/img/news/2.webp"
+                            alt=""
+                          />
+                        </div>
+                        <div class="news-item__content">
+                          <div class="news-item__title">
+                            <a href="#">
+                              Evering - Dự án nổi bật với chiếc nhẫn thông minh
+                              có khả năng thay thế ví tiền
+                            </a>
+                          </div>
+                          <div class="news-item__preview">
+                            Dự án Evering (hay còn được gọi là Ring) do đội ngũ
+                            trực thuộc CEV11 nhà Sun* thực hiện, đã hoàn thành
+                            sứ mệnh của mình khi chính thức cho ra mắt sản phẩm,
+                            nhận được sự hưởng ứng tích cực của đông đảo người
+                            dùng, thu hút tới hơn 10 Công ty đổ tiền đầu tư. Sức
+                            hút của dự án này đến từ đâu, khiến cho mức giá bán
+                            ra một sản phẩm không hề rẻ? Hãy cùng Sun* News giải
+                            mã ngay nhé!
+                          </div>
+                          <a
+                            class="slide-content__button btn--primary button--text-primary"
+                            >Xem chi tiết
+                            <span class="business-card__button-icon">
+                              <i class="fa-solid fa-arrow-right-long"></i>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="news-item">
+                        <div class="news-item__img-wrapper">
+                          <img
+                            class="news-item__img"
+                            src="./assets/img/news/3.webp"
+                            alt=""
+                          />
+                        </div>
+                        <div class="news-item__content">
+                          <div class="news-item__title">
+                            <a href="#">
+                              Ứng dụng của người Sun* - vỏn vẹn 2 ngày phát
+                              triển giúp tiết kiệm 1500 giờ làm việc mỗi tháng
+                            </a>
+                          </div>
+                          <div class="news-item__preview">
+                            Chẳng cần dùng file theo dõi cồng kềnh như những đợt
+                            'work from home' trước, giờ đây, công việc
+                            checkin/checkout của Sunners làm việc tại nhà hàng
+                            ngày chỉ còn là chuyện nhỏ khi đã có cô nàng "Thư Ký
+                            Kim" - công cụ chấm công tự động do chính người Sun*
+                            phát triển.
+                          </div>
+                          <a
+                            class="slide-content__button btn--primary button--text-primary"
+                            >Xem chi tiết
+                            <span class="business-card__button-icon">
+                              <i class="fa-solid fa-arrow-right-long"></i>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="news-item">
+                        <div class="news-item__img-wrapper">
+                          <img
+                            class="news-item__img"
+                            src="./assets/img/news/4.webp"
+                            alt=""
+                          />
+                        </div>
+                        <div class="news-item__content">
+                          <div class="news-item__title">
+                            <a href="#">
+                              Sun* Hồ Chí Minh: 1001 khoảnh khắc không thể nào
+                              quên tại chuyến du lịch Nha Trang
+                            </a>
+                          </div>
+                          <div class="news-item__preview">
+                            Vượt qua gần 500 cây số, các Sunners chi nhánh Hồ
+                            Chí Minh đã có mặt tại bờ biển Nha Trang, Khánh Hòa
+                            để cùng nhau bước vào chuyến du lịch 3N2Đ đáng nhớ
+                            của mình. Bên cạnh những trải nghiệm ấn tượng cùng
+                            với việc thưởng thức nhiều danh lam thắng cảnh tại
+                            Nha Trang, gần 100 anh em Sun* Hồ Chí Minh đã cùng
+                            nhau cháy hết mình với hoạt động team-building bãi
+                            biển cũng như chương trình Gala Night đặc sắc mang
+                            tên "On The Mic" tại khách sạn Nha Trang Horizon.
+                          </div>
+                          <a
+                            class="slide-content__button btn--primary button--text-primary"
+                            >Xem chi tiết
+                            <span class="business-card__button-icon">
+                              <i class="fa-solid fa-arrow-right-long"></i>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="news-item">
+                        <div class="news-item__img-wrapper">
+                          <img
+                            class="news-item__img"
+                            src="./assets/img/news/5.webp"
+                            alt=""
+                          />
+                        </div>
+                        <div class="news-item__content">
+                          <div class="news-item__title">
+                            <a href="#"> Sun* Duo 2022: Rực rỡ và mãn nhãn! </a>
+                          </div>
+                          <div class="news-item__preview">
+                            Sau chuyến Company Trip với rất nhiều kỷ niệm đẹp,
+                            chắc hẳn đêm Gala Night cùng sự kiện đặc biệt Sun*
+                            Duo 2022 là một điểm nhấn khó quên trong lòng tất cả
+                            Sunner Hà Nội có mặt trong chương trình.
+                          </div>
+                          <a
+                            class="slide-content__button btn--primary button--text-primary"
+                            >Xem chi tiết
+                            <span class="business-card__button-icon">
+                              <i class="fa-solid fa-arrow-right-long"></i>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="news-item">
+                        <div class="news-item__img-wrapper">
+                          <img
+                            class="news-item__img"
+                            src="./assets/img/news/6.webp"
+                            alt=""
+                          />
+                        </div>
+                        <div class="news-item__content">
+                          <div class="news-item__title">
+                            <a href="#">
+                              Sun* Đà Nẵng: Thanh xuân của chúng ta và kỷ niệm
+                              đáng nhớ về chuyến Company Trip của những "lần đầu
+                              tiên"
+                            </a>
+                          </div>
+                          <div class="news-item__preview">
+                            Lần đầu tiên trải nghiệm cảm giác quẩy xuyên đêm
+                            trên tàu; lần đầu tiên cùng nhau đặt chân đến vùng
+                            đất Nha Trang đầy nắng và gió; lần đầu tiên được hết
+                            mình cùng nhau trong Teambuilding sau hơn 2 năm tạm
+                            dừng do dịch bệnh; lần đầu tiên một sân khấu âm nhạc
+                            rực rỡ sắc màu và tràn đầy cảm xúc diễn ra...Tất cả
+                            những "lần đầu tiên" ấy đều đã lần lượt xuất hiện
+                            trong chuyến Sun* Company trip có 1-0-2 này của Sun*
+                            Đà Nẵng.
+                          </div>
+                          <a
+                            class="slide-content__button btn--primary button--text-primary"
+                            >Xem chi tiết
+                            <span class="business-card__button-icon">
+                              <i class="fa-solid fa-arrow-right-long"></i>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="news-footer">
+                    <div class="news-btn btn-wrapper">
+                      <a class="business-card__button" href="#"
+                        >Xem chi tiết
+                        <span class="business-card__button-icon">
+                          <i class="fa-solid fa-arrow-right-long fa-xs"></i>
+                        </span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -627,7 +655,7 @@
       <div class="grid wide">
         <div class="footer__top">
           <div class="row no-gutters">
-            <div class="col l-3">
+            <div class="col l-3 m-6 c-12">
               <div class="footer-logo">
                 <a href="#">
                   <img
@@ -638,7 +666,7 @@
                 </a>
               </div>
             </div>
-            <div class="col l-3">
+            <div class="col l-3 m-6 c-12">
               <div class="footer-list">
                 <div class="footer-list__title">Chúng tôi là ai?</div>
                 <a href="#" class="footer-list__item footer-list__item--link"
@@ -655,7 +683,7 @@
                 >
               </div>
             </div>
-            <div class="col l-3">
+            <div class="col l-3 m-6 c-12">
               <div class="footer-list">
                 <div class="footer-list__title">Chúng tôi làm gì?</div>
                 <a href="#" class="footer-list__item footer-list__item--link"
@@ -669,7 +697,7 @@
                 >
               </div>
             </div>
-            <div class="col l-3">
+            <div class="col l-3 m-6 c-12">
               <div class="footer-list">
                 <div class="footer-list__title">Cập nhật tin tức</div>
                 <a href="#" class="footer-list__item footer-list__item--link"
@@ -688,8 +716,8 @@
 
         <div class="footer__middle">
           <div class="row no-gutters">
-            <div class="col l-3"></div>
-            <div class="col l-3">
+            <div class="col l-3 m-0 c-0"></div>
+            <div class="col l-3 m-3 c-12">
               <div class="footer-list">
                 <div class="footer-list__title">Liên hệ</div>
                 <a href="#" class="footer-list__item footer-list__item--link"
@@ -700,7 +728,7 @@
                 >
               </div>
             </div>
-            <div class="col l-6">
+            <div class="col l-6 m-9 c-12">
               <div class="footer-list">
                 <div class="footer-list__title">Văn phòng</div>
                 <div class="footer-list__item">
@@ -727,7 +755,7 @@
       <div class="footer__divier">
         <div class="grid">
           <div class="row">
-            <div class="col l-12">
+            <div class="col l-12 m-12 c-12">
               <div class="footer-line"></div>
             </div>
           </div>
@@ -736,7 +764,7 @@
       <div class="footer__bottom">
         <div class="grid wide">
           <div class="row no-gutters">
-            <div class="col l-1">
+            <div class="col l-1 m-1 c-1">
               <div class="footer__bottom-logo">
                 <a href="#">
                   <img
@@ -747,7 +775,7 @@
                 </a>
               </div>
             </div>
-            <div class="col l-6">
+            <div class="col l-6 m-6 c-11">
               <div class="footer-list">
                 <div class="footer-list__item">
                   @ 2021 Sun-asterisk. All rights reserved.
@@ -766,12 +794,12 @@
                 </div>
               </div>
             </div>
-            <div class="col l-5">
+            <div class="col l-5 m-5">
               <div class="footer__bottom-socials">
                 <div class="footer__bottom-socials-icons">
                   <i
-                    class="fa-brands fa-youtube footer__bottom-socials-icon footer__bottom-socials-icon-youtube"></i>
-                  </i>
+                    class="fa-brands fa-youtube footer__bottom-socials-icon footer__bottom-socials-icon-youtube"
+                  ></i>
                   <i
                     class="fa-brands fa-facebook-f footer__bottom-socials-icon"
                   ></i>
@@ -779,7 +807,11 @@
                     class="fa-brands fa-linkedin-in footer__bottom-socials-icon"
                   ></i>
                   <a href="#">
-                    <img src="./assets/img/sunnew_logo.svg" class="footer__bottom-socials-img" alt="" />
+                    <img
+                      src="./assets/img/sunnew_logo.svg"
+                      class="footer__bottom-socials-img"
+                      alt=""
+                    />
                   </a>
                 </div>
               </div>
@@ -795,33 +827,40 @@
 
     <div class="web__btn-wrap web__btn-wrap--2">
       <svg width="36" height="36" viewBox="0 0 36 36">
-        <path fill="white" d="M1 17.99C1 8.51488 8.42339 1.5 18 1.5C27.5766 1.5 35 8.51488 35 17.99C35 27.4651 27.5766 34.48 18 34.48C16.2799 34.48 14.6296 34.2528 13.079 33.8264C12.7776 33.7435 12.4571 33.767 12.171 33.8933L8.79679 35.3828C7.91415 35.7724 6.91779 35.1446 6.88821 34.1803L6.79564 31.156C6.78425 30.7836 6.61663 30.4352 6.33893 30.1868C3.03116 27.2287 1 22.9461 1 17.99ZM12.7854 14.8897L7.79161 22.8124C7.31238 23.5727 8.24695 24.4295 8.96291 23.8862L14.327 19.8152C14.6899 19.5398 15.1913 19.5384 15.5557 19.8116L19.5276 22.7905C20.7193 23.6845 22.4204 23.3706 23.2148 22.1103L28.2085 14.1875C28.6877 13.4272 27.7531 12.5704 27.0371 13.1137L21.673 17.1847C21.3102 17.4601 20.8088 17.4616 20.4444 17.1882L16.4726 14.2094C15.2807 13.3155 13.5797 13.6293 12.7854 14.8897Z"></path>
+        <path
+          fill="white"
+          d="M1 17.99C1 8.51488 8.42339 1.5 18 1.5C27.5766 1.5 35 8.51488 35 17.99C35 27.4651 27.5766 34.48 18 34.48C16.2799 34.48 14.6296 34.2528 13.079 33.8264C12.7776 33.7435 12.4571 33.767 12.171 33.8933L8.79679 35.3828C7.91415 35.7724 6.91779 35.1446 6.88821 34.1803L6.79564 31.156C6.78425 30.7836 6.61663 30.4352 6.33893 30.1868C3.03116 27.2287 1 22.9461 1 17.99ZM12.7854 14.8897L7.79161 22.8124C7.31238 23.5727 8.24695 24.4295 8.96291 23.8862L14.327 19.8152C14.6899 19.5398 15.1913 19.5384 15.5557 19.8116L19.5276 22.7905C20.7193 23.6845 22.4204 23.3706 23.2148 22.1103L28.2085 14.1875C28.6877 13.4272 27.7531 12.5704 27.0371 13.1137L21.673 17.1847C21.3102 17.4601 20.8088 17.4616 20.4444 17.1882L16.4726 14.2094C15.2807 13.3155 13.5797 13.6293 12.7854 14.8897Z"
+        ></path>
       </svg>
     </div>
 
-    
     <div class="web__anchor-wrapper">
-      <div class="web__anchor-status">
-        Hình xác thực lại yêu cầu xác minh. 
-      </div>
+      <div class="web__anchor-status">Hình xác thực lại yêu cầu xác minh.</div>
       <div class="web__anchor-content smalltext">
         <div class="anchor__logo-wrap">
-          <img src="./assets/img/anchor_logo.png" class="anchor__logo-img">
-          </img>
+          <img src="./assets/img/anchor_logo.png" class="anchor__logo-img" />
         </div>
 
         <div class="rc-anchor-pt web__anchor-logo-text">
-          <a href="https://www.google.com/intl/vi/policies/privacy/" target="_blank">Bảo mật</a>
+          <a
+            href="https://www.google.com/intl/vi/policies/privacy/"
+            target="_blank"
+            >Bảo mật</a
+          >
           <span aria-hidden="true" role="presentation"> - </span>
-          <a href="https://www.google.com/intl/vi/policies/terms/" target="_blank">Điều khoản</a>
+          <a
+            href="https://www.google.com/intl/vi/policies/terms/"
+            target="_blank"
+            >Điều khoản</a
+          >
         </div>
       </div>
       <div class="web__anchor-invisible-content smalltext">
         <span>được bảo vệ bằng <strong>reCAPTCHA</strong></span>
         <div class="rc-anchor-pt">
-          <a href="#" >Bảo mật</a>
+          <a href="#">Bảo mật</a>
           <span aria-hidden="true" role="presentation"> - </span>
-          <a href="#" >Điều khoản</a>
+          <a href="#">Điều khoản</a>
         </div>
       </div>
     </div>
