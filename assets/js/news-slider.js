@@ -1,38 +1,38 @@
 let newsSlide = 0;
 const newFrameElement = document.querySelector(".news-body__list");
 
-function changeSlide() {
+function changeSlide(width) {
   newsSlide++;
-  if (newsSlide > 3) {
+  if ((width + 24) * newsSlide >= newFrameElement.scrollWidth) {
     newsSlide = 0;
     clearInterval(changeSlide);
   }
-  newFrameElement.scrollLeft = 382 * newsSlide;
+  newFrameElement.scrollLeft = (width + 24) * newsSlide;
 }
-function newsAutoChangeSlide() {
-  setInterval(changeSlide, 4000);
+function newsAutoChangeSlide(width) {
+  setInterval(changeSlide(width), 4000);
 }
 
-function newControlChangeSlide() {
+function newControlChangeSlide(width) {
   const newsPrevBtn = document.querySelector(".news-controls__prev-btn");
   const newsNextBtn = document.querySelector(".news-controls__next-btn");
 
   newsPrevBtn.addEventListener("click", function () {
     newsSlide--;
     if (newsSlide < 0) {
-      newsSlide = 2;
+      newsSlide = newFrameElement.scrollWidth / (width + 24);
       clearInterval(changeSlide);
     }
-    newFrameElement.scrollLeft = 382 * newsSlide;
+    newFrameElement.scrollLeft = (width + 24) * newsSlide;
   });
   newsNextBtn.addEventListener("click", function () {
     newsSlide++;
-    if (newsSlide > 3) {
+    if ((width + 24) * newsSlide >= newFrameElement.scrollWidth) {
       newsSlide = 0;
       clearInterval(changeSlide);
     }
-    newFrameElement.scrollLeft = 382 * newsSlide;
+    newFrameElement.scrollLeft = (width + 24) * newsSlide;
   });
 }
-newsAutoChangeSlide();
-newControlChangeSlide();
+newsAutoChangeSlide(newFrameElement.offsetWidth);
+newControlChangeSlide(newFrameElement.offsetWidth);

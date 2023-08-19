@@ -1,19 +1,19 @@
 let slide = 0;
 const frameElement = document.querySelector(".project-slider__frame");
 
-function changeSlide() {
+function changeSlide(width) {
   slide++;
   if (slide > 2) {
     slide = 0;
     clearInterval(changeSlide);
   }
-  frameElement.scrollLeft = 332 * slide;
+  frameElement.scrollLeft = width * slide;
 }
-function autoChangeSlide() {
-  setInterval(changeSlide, 4000);
+function autoChangeSlide(width) {
+  setInterval(changeSlide(width), 4000);
 }
 
-function controlChangeSlide() {
+function controlChangeSlide(width) {
   const prevBtn = document.querySelector(".controls__prev-btn");
   const nextBtn = document.querySelector(".controls__next-btn");
 
@@ -23,7 +23,7 @@ function controlChangeSlide() {
       slide = 2;
       clearInterval(changeSlide);
     }
-    frameElement.scrollLeft = 332 * slide;
+    frameElement.scrollLeft = width * slide;
   });
   nextBtn.addEventListener("click", function () {
     slide++;
@@ -31,8 +31,8 @@ function controlChangeSlide() {
       slide = 0;
       clearInterval(changeSlide);
     }
-    frameElement.scrollLeft = 332 * slide;
+    frameElement.scrollLeft = width * slide;
   });
 }
-autoChangeSlide();
-controlChangeSlide();
+autoChangeSlide(frameElement.offsetWidth);
+controlChangeSlide(frameElement.offsetWidth);

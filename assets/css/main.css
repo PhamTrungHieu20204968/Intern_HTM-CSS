@@ -104,6 +104,8 @@
   align-items: center;
   justify-content: flex-end;
   height: var(--header-height);
+  padding: 10px;
+  margin-right: 16px;
 }
 
 .toogle-menu-icon {
@@ -212,8 +214,20 @@
   color: rgb(43, 52, 65);
 }
 
+@media screen and (max-width: 1024px) {
+  .body-title {
+    font-size: 2.8rem;
+  }
+}
+
+@media screen and (max-width: 764px) {
+  .body-title {
+    font-size: 2.4rem;
+  }
+}
+
 .business {
-  padding-top: 32px;
+  padding: 32px 10px 10px 10px;
   margin-bottom: 32px;
 }
 
@@ -405,6 +419,23 @@
   position: relative;
   z-index: 1;
 }
+
+@media screen and (max-width: 1024px) {
+  .business-card__button {
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    height: 64px;
+  }
+}
+
+@media screen and (max-width: 764px) {
+  .business-card__button {
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+    height: 60px;
+  }
+}
+
 .business-card__button-icon {
   width: 24px;
   height: 24px;
@@ -538,7 +569,7 @@
 
 .project-counter__number-wrap {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .project-counter__number {
@@ -548,21 +579,49 @@
   line-height: 1.2;
 }
 
+.project-counter__text-wrap {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
 .project-counter__label {
   color: #c01111;
-  font-size: 48px;
+  font-size: 4.8rem;
   font-weight: 700;
   padding-left: 30px;
-  position: relative;
-  top: 34px;
+  margin-bottom: 16px;
 }
 
 .project-counter__title {
-  font-size: 24px;
-  position: relative;
-  top: -25px;
-  left: -50px;
+  font-size: 2.4rem;
+  padding-left: 30px;
   color: rgb(77, 89, 105);
+}
+
+@media screen and (max-width: 1024px) {
+  .project-counter__number {
+    font-size: 8rem;
+  }
+  .project-counter__label {
+    font-size: 3.2rem;
+  }
+  .project-counter__title {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 764px) {
+  .project-counter__number {
+    font-size: 6rem;
+  }
+  .project-counter__label {
+    font-size: 2rem;
+  }
+  .project-counter__title {
+    font-size: 1.4rem;
+  }
 }
 
 .btn-wrapper {
@@ -607,7 +666,7 @@
 }
 
 .project-slider__frame {
-  width: 332px;
+  width: 100%;
   max-height: 470px;
   position: relative;
   margin-top: 90px;
@@ -682,9 +741,10 @@
 }
 
 .project-slider__controls {
-  width: 332px;
+  width: 100%;
   position: absolute;
   bottom: 24px;
+  right: 12px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -727,6 +787,7 @@
 }
 
 .career-container {
+  width: 100%;
   background-image: url(https://sun-asterisk.vn/wp-content/uploads/2020/11/career-bg.jpg);
   position: relative;
   border-radius: 16px;
@@ -909,6 +970,28 @@
   font-weight: 500;
 }
 
+@media screen and (max-width: 1024px) {
+  .populated__item-title {
+    font-size: 1.4rem;
+    height: 64px;
+    line-height: 2.8rem;
+  }
+
+  .populated-list__icon-wrap {
+    width: 20px;
+    height: 20px;
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 764px) {
+  .populated__item-title {
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+    height: 60px;
+  }
+}
+
 .populated__banner {
   width: 100%;
   margin-top: 65px;
@@ -995,6 +1078,13 @@
   border-radius: 8px;
   margin: 0 12px;
   transition: all 0.3s;
+}
+
+@media screen and (max-width: 764px) {
+  .news-item {
+    min-width: 100%;
+    width: 100%;
+  }
 }
 
 .news-item:hover {
