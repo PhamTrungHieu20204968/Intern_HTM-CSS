@@ -1,38 +1,39 @@
 let newsSlide = 0;
 const newFrameElement = document.querySelector(".news-body__list");
+const newsItems = document.querySelector(".news-item");
 
-function changeSlide(width) {
+function changeSlide() {
   newsSlide++;
-  if ((width + 24) * newsSlide >= newFrameElement.scrollWidth) {
+  if (newsSlide > 3) {
     newsSlide = 0;
     clearInterval(changeSlide);
   }
-  newFrameElement.scrollLeft = (width + 24) * newsSlide;
+  newFrameElement.scrollLeft = (newsItems.clientWidth + 8) * newsSlide;
 }
-function newsAutoChangeSlide(width) {
-  setInterval(changeSlide(width), 4000);
+function newsAutoChangeSlide() {
+  setInterval(changeSlide, 4000);
 }
 
-function newControlChangeSlide(width) {
+function newControlChangeSlide() {
   const newsPrevBtn = document.querySelector(".news-controls__prev-btn");
   const newsNextBtn = document.querySelector(".news-controls__next-btn");
 
   newsPrevBtn.addEventListener("click", function () {
     newsSlide--;
     if (newsSlide < 0) {
-      newsSlide = newFrameElement.scrollWidth / (width + 24);
+      newsSlide = 2;
       clearInterval(changeSlide);
     }
-    newFrameElement.scrollLeft = (width + 24) * newsSlide;
+    newFrameElement.scrollLeft = (newsItems.clientWidth + 8) * newsSlide;
   });
   newsNextBtn.addEventListener("click", function () {
     newsSlide++;
-    if ((width + 24) * newsSlide >= newFrameElement.scrollWidth) {
+    if ((newsSlide > 3 && newsItems.clientWidth < 400) || newsSlide > 5) {
       newsSlide = 0;
       clearInterval(changeSlide);
     }
-    newFrameElement.scrollLeft = (width + 24) * newsSlide;
+    newFrameElement.scrollLeft = (newsItems.clientWidth + 8) * newsSlide;
   });
 }
-newsAutoChangeSlide(newFrameElement.offsetWidth);
-newControlChangeSlide(newFrameElement.offsetWidth);
+newsAutoChangeSlide();
+newControlChangeSlide();
