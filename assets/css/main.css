@@ -679,6 +679,7 @@
 }
 
 .frame__slide {
+  min-width: 100%;
   width: 100%;
   position: relative;
 }
@@ -945,7 +946,7 @@
 .populated-list__item {
   width: 100%;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   margin-bottom: 35px;
 }
 
